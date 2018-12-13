@@ -2,94 +2,64 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crystals Collector</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
-        crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <title>Crystal Collection</title>
+
+  <!-- Added link to the jQuery Library and Javascript-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="assets/javascript/game.js"></script>
+
+  <!-- Added a link to Bootstrap and css stylesheets-->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
 <body>
-
-
-
-
-
-    <div class="row">
-
-        <div class="col-sm-3.5">
-
-            <div class=" jumbotron " style="background-color: darkorange ">
-
-                <h1 class="text-white ">CrystalsCollector!</h1>
-
-            </div>
-        </div>
+  <div class="container">
+    <header>
+      <h1>Crystals Collector</h1>
+    </header>
+    <div id="instructions">
+      <ul>
+        <h2>Instructions: </h2>
+        <li>You will be given a random number at the start of the game.</li>
+        <li> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+        </li>
+        <li>You will win the game by matching the total score to the random number. You lose the game if your total score goes
+          above the random number.
+        </li>
+        <li>The value of each crystal is hidden from you until you click on it.</li>
+        <li>Each time the game starts, the game will change the value of each crystal.</li>
+      </ul>
     </div>
-
-
-    <div class="row">
-
-        <div class="col-sm-4">
-
-            <div class="jumbotron " style="background-color:rgb(241, 223, 200) ">
-                <p>You will be given a random number at the start of the game. </p>
-                <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
-                    total score. </p>
-                <p>You win the game by matching your total score to random number, you lose the game if your total score goes
-                    above the random number. </p>
-                <p> The value of each crystal is hidden from you until you click on it. </p>
-                <p>Each time when the game starts, the game will change the values of each crystal. </p>
-
-
-            </div>
-        </div>
+    <div class="row crystals">
+      <div class="col-sm-2">
+        <img src="assets/images/red.png" class="img-fluid crystal1">
+      </div>
+      <div class="col-sm-2">
+        <img src="assets/images/green.png" class="img-fluid crystal2">
+      </div>
+      <div class="col-sm-2">
+        <img src="assets/images/yellow_egg.png" class="img-fluid crystal3">
+      </div>
+      <div class="col-sm-2">
+        <img src="assets/images/circle.png" class="img-fluid crystal4">
+      </div>
+      <div class="col-sm-.5"></div>
+      <div class="col-sm-3" id="talley">
+        <div id="wins"> <h4>Wins:</h4></div>
+        <br>
+        <div id="losses"><h4>Losses:</h4></div>
+      </div>
     </div>
-
-
-    <div class="row">
-
-        <div class="col-sm-2">
-
-            <div class="jumbotron " style="background-color:rgb(119, 187, 119) ">39 </div>
-        </div>
+    <div class = "row" id= "game">
+      <div class = "col-sm-4" id="randnum"><h4>Random Number</h4></div>
+      <div class = "col-sm-4" id="userScore"><h4>Total Score</h4></div>
+      <div class = "col-sm-3"></div>
     </div>
-
-
-    <div class="row">
-
-            <div class="col-sm-1">
-
-    <div class="jumbotron " style="background-color:deepskyblue ">
-        <p>Wins:</p>
-        <p>Loses:</p>
-    </div>
-</div>
-</div>
-
-    <div class="jumbotron " style="background-color:rgb(31, 136, 113) ">Your total score is:</div>
-
-    <div class="jumbotron " style="background-color:rgb(31, 136, 113) ">0</div>
-
-
-
-
-
-
-
-
-
-
-
-    <div>
-        <button>
-            <img src=" " alt=" ">
-        </button>
-    </div>
-
-
+  </div>
 
 
 
